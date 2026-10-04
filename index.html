@@ -1,384 +1,431 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Hidieo Riz'n</title>
-    <link rel="stylesheet" href="src\style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidieo Riz'n | Application Engineer</title>
+  <meta name="description" content="Lulusan S1 Teknik Komputer, mahasiswa S2 Informatika Telkom University, dengan pengalaman integrasi sistem, IoT/mikrokontroler, dan kalibrasi alat. Terbuka untuk peran Application Engineer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
-    <!-- Background bubbles -->
-    <div class="bubbles">
-        <div class="bubble" style="width: 100px; height: 100px; top: 10%; left: 5%; animation-delay: 0s;"></div>
-        <div class="bubble" style="width: 150px; height: 150px; top: 40%; left: 80%; animation-delay: 2s;"></div>
-        <div class="bubble" style="width: 80px; height: 80px; top: 70%; left: 15%; animation-delay: 4s;"></div>
-        <div class="bubble" style="width: 120px; height: 120px; top: 20%; left: 50%; animation-delay: 1s;"></div>
-        <div class="bubble" style="width: 90px; height: 90px; top: 85%; left: 70%; animation-delay: 3s;"></div>
-    </div>
+  <div class="aurora" aria-hidden="true"></div>
+  <canvas id="trace" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"></div>
 
-    <!-- Back to top button -->
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+  <!-- ===== Header / Navigasi ===== -->
+  <header class="bar glass">
+    <a href="#top" class="brand">Hidieo Riz'n</a>
+    <nav>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
 
-    <!-- Header & Navigation -->
-    <header id="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <div class="logo-icon">My</div>
-                    <div class="logo-text">Portofolio</div>
-                </a>
-                <div class="nav-links">
-                    <a href="#about">Tentang Saya</a>
-                    <a href="#experience">Pengalaman</a>
-                    <a href="#projects">Project</a>
-                    <a href="#certifications">Sertifikasi</a>
-                    <a href="#contact">Kontak</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <main id="top">
 
-    <!-- Hero Section -->
+    <!-- ===== Hero ===== -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Halo, Saya <span>Hidieo Riz'n</span></h1>
-                    <p>Calon Management Trainee dengan passion di bidang pengembangan bisnis dan kepemimpinan operasional. Saya memiliki kemampuan analitis yang kuat dan pengalaman dalam meningkatkan efisiensi proses bisnis.</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
-                        <a href="#projects" class="btn btn-outline">Lihat Project</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-card">
-                        <div class="profile-img">
-                            <img src="src/image.png" alt="Hidieo Rizn" class="profile-img">
-                        </div>
-                        <h2>Hidieo Riz'n</h2>
-                        <p class="tagline">Management Trainee Candidate</p>
-                        <div class="qr-section">
-                            <div class="qr-code">
-                                <img src="src/frame.png" alt="QR Code" class="qr-code">
-                            </div>
-                            <p>Scan QR di atas untuk CV</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-text">
+        <div class="ident">
+          <h1>Hidieo Riz'n</h1><br>
+          <p class="role">Application Engineer</p>
         </div>
+        <p class="lede">Lulusan terbaik Teknik Komputer yang kini menempuh S2 Informatika di Telkom University. Dua tahun di laboratorium membuat saya terbiasa mengkalibrasi alat ukur dan memprogram mikrokontroler.</p>
+        <div class="cta">
+          <a class="btn primary" href="#kontak">Hubungi saya</a>
+          <a class="btn" href="#proyek">Lihat proyek</a>
+        </div>
+      </div>
+
+      <aside class="card glass profile">
+        <img src="src/image.png" alt="Foto Hidieo Riz'n" width="180" height="173">
+        <p class="where">Bogor, Indonesia</p>
+        <img class="qr" src="src/frame.png" alt="QR code menuju CV" width="120" height="138" loading="lazy">
+        <small>Pindai untuk membuka CV</small>
+      </aside>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tentang Saya</h2>
-                <p>Profil profesional dan keterampilan yang saya miliki sebagai calon Management Trainee</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Profil Pribadi</h3>
-                    <p>Saya merupakan fresh graduate Sistem Komputer di Universitas Putra Indonesia YPTK Padang dengan IPK 3.96. Selama masa studi, saya aktif sebagai Asisten Laboratorium Sistem Komputer, di mana saya mengasah keterampilan dalam pemecahan masalah teknis, kerja tim, serta pengelolaan operasional laboratorium. Pengalaman ini turut memperkuat kemampuan saya dalam analisis masalah, perencanaan strategis, dan manajemen operasional sehingga memiliki kompetensi yang relevan untuk berkontribusi secara optimal sebagai seorang Management Trainee.</p>
-                    <p>Saya percaya bahwa kombinasi antara pendekatan berbasis data dan kepemimpinan yang visioner adalah kunci untuk mengatasi tantangan bisnis kontemporer. Sebagai calon Management Trainee, saya berkomitmen untuk terus belajar dan berkontribusi dalam menciptakan solusi inovatif.</p>
-                    
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-brain"></i> Soft Skills</h4>
-                            <ul class="skill-list">
-                                <li>Komunikasi Efektif</li>
-                                <li>Pemecahan Masalah Kreatif</li>
-                                <li>Kepemimpinan</li>
-                                <li>Manajemen Waktu</li>
-                                <li>Adaptabilitas</li>
-                                <li>Kolaborasi Tim</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-chart-line"></i> Keterampilan Teknis</h4>
-                            <ul class="skill-list">
-                                <li>Analisis Data (Excel, Python, Looker)</li>
-                                <li>Manajemen Waktu</li>
-                                <li>Riset Pasar</li>
-                                <li>Strategi Bisnis</li>
-                                <li>Presentasi Efektif</li>
-                                <li>Manajemen Operasional</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="stats-card">
-                        <h3>Kemampuan Utama</h3>
-                        <div class="stat-item">
-                            <h5>Kepemimpinan <span>95%</span></h5>
-                            <div class="stat-bar">
-                                <div class="stat-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <h5>Analisis Bisnis <span>90%</span></h5>
-                            <div class="stat-bar">
-                                <div class="stat-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <h5>Manajemen Proyek <span>85%</span></h5>
-                            <div class="stat-bar">
-                                <div class="stat-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <h5>Komunikasi <span>92%</span></h5>
-                            <div class="stat-bar">
-                                <div class="stat-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="education">
-                            <h4><i class="fas fa-graduation-cap"></i> Pendidikan</h4>
-                            <div class="edu-item">
-                                <div class="edu-icon">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <div class="edu-content">
-                                    <h5>Universitas Putra Indonesia YPTK Padang</h5>
-                                    <p>S1 Sistem Komputer | Sep 2021 - Mei 2025</p>
-                                    <p>IPK: 3.96/4.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ===== Pengalaman ===== -->
+    <section id="pengalaman" class="sec">
+      <h2>Pengalaman</h2>
+      <div class="rows tl">
+
+        <article class="card glass">
+          <time>Maret 2025 – sekarang</time>
+          <h3>Freelance IT &amp; Systems Specialist</h3>
+          <p class="org">Berbasis proyek</p>
+          <ul>
+            <li>Membuat perangkat lunak, aplikasi web/mobile, dan prototipe IoT/mikrokontroler sesuai spesifikasi klien.</li>
+            <li>Mengintegrasikan sistem, menganalisis data, dan menelusuri masalah teknis di perangkat keras dan lunak agar kinerja ujung ke ujung andal.</li>
+          </ul>
+        </article>
+
+        <article class="card glass">
+          <time>Desember 2025 – sekarang</time>
+          <h3>Freelance Operations &amp; Data Administrator</h3>
+          <p class="org">Vendor pengadaan material</p>
+          <ul>
+            <li>Memverifikasi biaya material sebelum pengadaan dan merekap transaksi harian.</li>
+            <li>Mengaudit RAB dan RAP di beberapa lokasi konstruksi agar sesuai anggaran.</li>
+          </ul>
+        </article>
+
+        <article class="card glass">
+          <time>April 2023 – Maret 2025</time>
+          <h3>Asisten Laboratorium</h3>
+          <p class="org">Teknik Komputer, Universitas Putra Indonesia YPTK Padang</p>
+          <ul>
+            <li>Membimbing mahasiswa merakit hardware, mendiagnosis sistem, dan memprogram mikrokontroler (Arduino) di praktikum.</li>
+            <li>Menyiapkan, mengkalibrasi, dan merawat alat laboratorium serta instrumen meja (benchtop) agar tetap andal.</li>
+          </ul>
+        </article>
+
+        <article class="card glass">
+          <time>Mei 2023</time>
+          <h3>Anggota Tim, Kompetisi Robot Tematik Indonesia (PUSPRESNAS)</h3>
+          <ul>
+            <li>Ikut merancang, mengembangkan, dan menguji robot tematik bersama tim.</li>
+            <li>Mengintegrasikan sensor, aktuator, dan modul mikrokontroler untuk kendali real-time yang stabil.</li>
+          </ul>
+        </article>
+
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" style="background: rgba(232, 245, 233, 0.5);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Pengalaman</h2>
-                <p>Perjalanan profesional dan organisasi yang membentuk kemampuan saya</p>
-            </div>
-            <div class="experience-container">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="timeline-date">April 2023 - Mei 2025</span>
-                            <h3>Asisten Laboratorium Sistem Komputer</h3>
-                            <p>Universitas Putra Indonesia YPTK Padang</p>
-                            <ul>
-                                <li>Menangani instalasi, kalibrasi, dan pemeliharaan alat laboratorium, meningkatkan efisiensi dan mengurangi downtime hingga 30%.</li>
-                                <li>Membimbing mahasiswa dalam praktik sistem komputer, seperti perakitan hardware, pemrograman Arduino, dan diagnostik.</li>
-                                <li>Mengelola inventaris laboratorium dengan pencatatan akurat dan penanganan permintaan tiap semester secara efisien.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ===== Pendidikan ===== -->
+    <section id="pendidikan" class="sec">
+      <h2>Pendidikan</h2>
+      <div class="rows tl">
+
+        <article class="card glass">
+          <time>Sep 2025 – sekarang</time>
+          <h3>S2 Informatika, Telkom University</h3>
+          <ul>
+            <li>Fokus pada Sistem Cerdas, Analitik Data, dan Arsitektur Perangkat Lunak.</li>
+          </ul>
+        </article>
+
+        <article class="card glass">
+          <time>Sep 2021 – Mei 2025</time>
+          <h3>S1 Teknik Komputer, Universitas Putra Indonesia YPTK</h3>
+          <ul>
+            <li>IPK 3,96 / 4,00; lulusan terbaik Departemen Teknik Komputer tahun akademik 2024/2025.</li>
+            <li>Penerima Beasiswa Champion UPI-YPTK Padang.</li>
+            <li>Terpilih mengikuti studi banding ke luar negeri: Malaysia–Thailand dan Malaysia–Singapura.</li>
+          </ul>
+        </article>
+
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Project Relevan</h2>
-                <p>Beberapa proyek analisis dan manajemen yang pernah saya kerjakan</p>
+    <!-- ===== Proyek ===== -->
+    <section id="proyek" class="sec">
+      <h2>Proyek</h2>
+      <div class="groups">
+
+        <div class="group">
+          <h3 class="grp">IoT &amp; Mikrokontroler</h3>
+          <div class="rows">
+
+            <div class="row glass">
+              <h3>Meja Belajar Pintar</h3>
+              <p>Sistem meja pintar berbasis IoT yang dilengkapi sensor otomatis untuk menyesuaikan intensitas pencahayaan, mendeteksi postur duduk, dan memantau durasi belajar secara real-time.</p>
+              <ul class="tags">
+                <li>IoT</li>
+                <li>Mikrokontroler</li>
+                <li>Sensor Integration</li>
+                <li>Embedded System</li>
+              </ul>
             </div>
-            <div class="projects-grid">
-                <a href="https://www.kaggle.com/code/hidieorizn/bitcoin-volatility-analysis" target="_blank" class="project-card">
-                    <div class="project-img">
-                        <div class="project-img-content">
-                            <i class="fas fa-chart-pie"></i>
-                            <h3>Analisis Riset Pasar</h3>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Analisis Volatilitas Aset Digital</h3>
-                        <p>Proyek analisis data untuk menganalisis fluktuasi harga aset berbasis pasar selama 7 hari untuk mengidentifikasi tingkat risiko dan memberikan rekomendasi strategi mitigasi bagi pengambilan keputusan investasi.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Analisis Data</span>
-                            <span class="project-tag">Riset Pasar</span>
-                            <span class="project-tag">Analytical Thinking</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.kaggle.com/code/hidieorizn/iris-flower-classification" target="_blank" class="project-card">
-                    <div class="project-img">
-                        <div class="project-img-content">
-                            <i class="fas fa-shopping-cart"></i>
-                            <h3>Analisis Kategori</h3>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Analisis Klasifikasi Kategori Produk</h3>
-                        <p>Studi model klasifikasi yang mengelompokkan jenis produk berdasarkan fitur fisiknya, dengan contoh kasus pada klasifikasi tiga jenis bunga Iris menggunakan panjang dan lebar sepal serta petal.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Analisis Data</span>
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">AI</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.kaggle.com/code/hidieorizn/predictive-house-price" target="_blank" class="project-card">
-                    <div class="project-img">
-                        <div class="project-img-content">
-                            <i class="fas fa-bullseye"></i>
-                            <h3>Analisis Harga Aset Real Estate</h3>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Analisis Penentuan Harga Aset Real Estate</h3>
-                        <p>Membangun model prediktif berbasis regresi untuk memperkirakan harga aset real estate menggunakan berbagai fitur seperti luas bangunan, jumlah kamar, transportasi, dan umur properti.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Analisis Data</span>
-                            <span class="project-tag">Riset Pasar</span>
-                            <span class="project-tag">AI</span>
-                        </div>
-                    </div>
-                </a>
+
+            <div class="row glass">
+              <h3>Media Interaktif Pembelajaran Peta Indonesia</h3>
+              <p>Alat peraga edukasi interaktif yang menampilkan informasi geografis dan kebudayaan daerah melalui respons visual serta audio saat titik wilayah pada peta diakses.</p>
+              <ul class="tags">
+                <li>Mikrokontroler</li>
+                <li>Hardware Prototyping</li>
+                <li>Touch Sensor</li>
+                <li>EduTech</li>
+              </ul>
             </div>
+
+            <div class="row glass">
+              <h3>Robot Pemandu Museum</h3>
+              <p>Prototipe robot navigasi mandiri yang dirancang untuk memandu pengunjung museum dan memberikan deskripsi artefak secara otomatis sepanjang rute panduan.</p>
+              <ul class="tags">
+                <li>Robotics</li>
+                <li>Obstacle Detection</li>
+                <li>Microcontroller</li>
+                <li>Automation</li>
+              </ul>
+            </div>
+
+            <div class="row glass">
+              <h3>Sistem Tabel Periodik Pintar</h3>
+              <p>Perangkat keras interaktif berbasis mikrokontroler untuk pembelajaran kimia, menampilkan sifat fisik dan reaksi kimia unsur secara dinamis berdasarkan input pengguna.</p>
+              <ul class="tags">
+                <li>Embedded System</li>
+                <li>Interactive Hardware</li>
+                <li>Mikrokontroler</li>
+                <li>EduTech</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
+
+        <div class="group">
+          <h3 class="grp">Software &amp; Aplikasi</h3>
+          <div class="rows">
+
+            <div class="row glass">
+              <h3>Aplikasi Android Pembelajaran Bahasa Inggris (SMK 9 Padang)</h3>
+              <p>Aplikasi mobile edukasi interaktif untuk membantu siswa SMK 9 Padang memperdalam materi Bahasa Inggris vokasional berbasis simulasi praktis.</p>
+              <ul class="tags">
+                <li>Android</li>
+                <li>Java</li>
+                <li>Mobile App Development</li>
+                <li>UI/UX</li>
+              </ul>
+            </div>
+
+            <a class="row glass" href="https://english-learning-app-upiyptk.streamlit.app/" target="_blank" rel="noopener">
+              <h3>Website Text-to-Speech (TTS) &amp; Speech-to-Text (STT) Bahasa Inggris</h3>
+              <p>Platform web interaktif yang mengintegrasikan pemrosesan suara untuk mengonversi teks ke audio dan mentranskrip ucapan Bahasa Inggris secara langsung.</p>
+              <ul class="tags">
+                <li>Web Development</li>
+                <li>Audio Processing</li>
+                <li>JavaScript</li>
+                <li>API Integration</li>
+              </ul>
+            </a>
+
+            <div class="row glass">
+              <h3>Website Sistem Distribusi Bisnis Telur</h3>
+              <p>Aplikasi web operasional untuk mencatat inventaris stok telur, mengelola rantai pasokan, dan merekap transaksi penjualan harian secara terpusat.</p>
+              <ul class="tags">
+                <li>Web Application</li>
+                <li>Database Management</li>
+                <li>Inventory System</li>
+              </ul>
+            </div>
+
+            <a class="row glass" href="https://koperasi-mp-bogor.site/" target="_blank" rel="noopener">
+              <h3>Website Portal Vendor KDMP</h3>
+              <p>Portal web manajemen vendor untuk mempermudah alur pengadaan material, pencatatan dokumen transaksi, dan koordinasi operasional antar-pihak.</p>
+              <ul class="tags">
+                <li>Web Portal</li>
+                <li>Procurement Management</li>
+                <li>Full-Stack Web</li>
+              </ul>
+            </a>
+
+            <div class="row glass">
+              <h3>Aplikasi Desktop Operational Management (Perusahaan Pembangunan Bogor)</h3>
+              <p>Software desktop internal untuk mempermudah pencatatan rekapitulasi operasional harian, kontrol anggaran proyek, dan pemantauan alur kerja pembangunan.</p>
+              <ul class="tags">
+                <li>Desktop Application</li>
+                <li>Data Management</li>
+                <li>Internal System</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="group">
+          <h3 class="grp">Data Science &amp; Machine Learning</h3>
+          <div class="rows">
+
+            <a class="row glass" href="https://student-depression-prediction-stukom.streamlit.app/" target="_blank" rel="noopener">
+              <h3>Sistem Pelacakan &amp; Analisis Tingkat Stres Mahasiswa</h3>
+              <p>Model analitis berbasis Machine Learning yang memproses indikator perilaku untuk mengklasifikasikan dan memprediksi tingkat stres mahasiswa secara akurat.</p>
+              <ul class="tags">
+                <li>Data Science</li>
+                <li>Machine Learning</li>
+                <li>Python</li>
+                <li>Predictive Analytics</li>
+              </ul>
+            </a>
+
+            <a class="row glass" href="https://www.kaggle.com/code/hidieorizn/bitcoin-volatility-analysis" target="_blank" rel="noopener">
+              <h3>Analisis Volatilitas Aset Digital</h3>
+              <p>Menganalisis fluktuasi harga aset digital selama 7 hari untuk menilai tingkat risiko serta menyusun rekomendasi mitigasi risiko secara terstruktur.</p>
+              <ul class="tags">
+                <li>Analisis Data</li>
+                <li>Python</li>
+                <li>Kaggle</li>
+              </ul>
+            </a>
+
+            <a class="row glass" href="https://www.kaggle.com/code/hidieorizn/iris-flower-classification" target="_blank" rel="noopener">
+              <h3>Klasifikasi Bunga Iris</h3>
+              <p>Model klasifikasi Machine Learning untuk memprediksi tiga jenis spesies bunga Iris berdasarkan fitur panjang dan lebar sepal serta petal.</p>
+              <ul class="tags">
+                <li>Machine Learning</li>
+                <li>Python</li>
+                <li>Kaggle</li>
+              </ul>
+            </a>
+
+            <a class="row glass" href="https://www.kaggle.com/code/hidieorizn/predictive-house-price" target="_blank" rel="noopener">
+              <h3>Prediksi Harga Properti</h3>
+              <p>Model regresi yang memperkirakan harga properti berdasarkan variabel luas bangunan, jumlah kamar, akses transportasi, dan umur properti.</p>
+              <ul class="tags">
+                <li>Regresi</li>
+                <li>Python</li>
+                <li>Kaggle</li>
+              </ul>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" style="background: rgba(232, 245, 233, 0.5);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Sertifikasi</h2>
-                <p>Sertifikasi profesional yang mendukung kompetensi saya sebagai Management Trainee</p>
-            </div>
-            <div class="certs-container">
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Junior Data Analyst Career</h3>
-                    </div>
-                    <div class="cert-body">
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>Penyelenggara:</strong> DQLab</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>Topik:</strong> Analisis Data untuk Pengambilan Berbagai Keputusan </li>
-                            <li><i class="fas fa-check-circle"></i> <strong>Keterampilan:</strong> Analytical Thinking, Data Visualization, Statistical Analysis, Business Intelligence</li>
-                        </ul>
-                        <span class="cert-date">Diperoleh: Mei 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>Intro to Data Analytics</h3>
-                    </div>
-                    <div class="cert-body">
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>Penyelenggara:</strong> RevoU</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>Topik:</strong> Analisis Data untuk Pengambilan Berbagai Keputusan </li>
-                            <li><i class="fas fa-check-circle"></i> <strong>Keterampilan:</strong> Analytical Thinking, Storytelling with Data, Problem Solving, Business Intelligence</li>
-                        </ul>
-                        <span class="cert-date">Diperoleh: Mei 2025</span>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <i class="fas fa-users"></i>
-                        <h3>Operator Komputer Madya</h3>
-                    </div>
-                    <div class="cert-body">
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>Penyelenggara:</strong> BNSP Indonesia</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>Topik:</strong> Pengelolaan Data dan Dokumen Digital Secara Efisien</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>Keterampilan:</strong> Microsoft Office, Pengelolaan Dokumen Digital, Efisiensi Kerja Komputasi</li>
+    <!-- ===== Keahlian ===== -->
+    <section id="keahlian" class="sec">
+      <h2>Keahlian</h2>
+      <div class="grid2">
 
-                        </ul>
-                        <span class="cert-date">Diperoleh: Sep 2024</span>
-                    </div>
-                </div>
-            </div>
+        <div class="card glass">
+          <h3>Hardware dan embedded</h3>
+          <ul class="tags">
+            <li>Arduino</li>
+            <li>Mikrokontroler</li>
+            <li>Raspberry Pi</li>
+            <li>Sensor dan aktuator</li>
+            <li>Prototipe hardware</li>
+          </ul>
         </div>
+
+        <div class="card glass">
+          <h3>Pemrograman</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+
+        <div class="card glass">
+          <h3>Cara kerja dan bahasa</h3>
+          <ul class="tags">
+            <li>Pemecahan masalah</li>
+            <li>Berpikir kritis</li>
+            <li>Adaptabilitas</li>
+            <li>Kerja tim</li>
+            <li>Presentasi teknis</li>
+            <li>Inggris (TOEFL 513)</li>
+          </ul>
+        </div>
+
+        <div class="card glass">
+          <h3>Sertifikasi</h3>
+          <ul class="plain">
+            <li>Junior Mobile Programming, BNSP-KOMINFO (2022)</li>
+            <li>Operator Komputer Madya, BNSP-KOMINFO (2024)</li>
+            <li>Junior Data Analyst Career, DQLab (2025)</li>
+            <li>Intro to Data Analytics, RevoU (2025)</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Kontak Saya</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Informasi Kontak</h3>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <div class="contact-detail-content">
-                            <h4>Email</h4>
-                            <p>deorizn@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-phone"></i>
-                        <div class="contact-detail-content">
-                            <h4>Telepon</h4>
-                            <p>+62 823 8579 0090</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact-detail-content">
-                            <h4>Lokasi</h4>
-                            <p>Padang, Sumatera Barat</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Kirim Pesan Langsung</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" placeholder="Masukkan nama Anda" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Masukkan email Anda" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subjek</label>
-                            <input type="text" id="subject" placeholder="Subjek pesan" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Pesan</label>
-                            <textarea id="message" placeholder="Tulis pesan Anda" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.2rem;">
-                            Kirim Pesan
-                        </button>
-                    </form>
-                </div>
-            </div>
+    <!-- ===== Kontak ===== -->
+    <section id="kontak" class="sec">
+      <h2>Kontak</h2>
+      <div class="grid2">
+
+        <div class="card glass contact">
+          <p class="lead">Terbuka untuk peran Application Engineer. Email adalah cara tercepat menghubungi saya.</p>
+
+          <ul class="ct">
+            <li>
+              <a class="ci" href="mailto:deorizn@gmail.com">
+                <i class="ico">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="m3 7 9 6 9-6"/>
+                  </svg>
+                </i>
+                <span><small>Email</small>deorizn@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a class="ci" href="tel:+6282385790090">
+                <i class="ico">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+                  </svg>
+                </i>
+                <span><small>Telepon</small>+62 823 8579 0090</span>
+              </a>
+            </li>
+            <li>
+              <div class="ci">
+                <i class="ico">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                </i>
+                <span><small>Lokasi</small>Bogor, Indonesia</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="soc">
+            <a class="chip" href="https://www.linkedin.com/in/hidieorizn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>LinkedIn</a>
+            <a class="chip" href="https://www.github.com/Hidieo" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>GitHub</a>
+            <a class="chip" href="https://www.kaggle.com/hidieorizn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.281.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358"/>
+              </svg>Kaggle</a>
+            <a class="chip" href="https://www.instagram.com/hrizn_16/" target="_blank" rel="noopener">
+              <svg class="s" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.3" cy="6.7" r="1" fill="currentColor"/>
+              </svg>Instagram</a>
+          </div>
         </div>
+
+        <form id="contactForm" class="card glass">
+          <label>Nama<input id="name" required></label>
+          <label>Email<input id="email" type="email" required></label>
+          <label>Pesan<textarea id="message" rows="4" required></textarea></label>
+          <button class="btn primary" type="submit">Buka email</button>
+          <small id="note" role="status"></small>
+        </form>
+
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-        
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/hidieorizn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/hrizn_16/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.github.com/Hidieo"><i class="fab fa-github"></i></a>
-                    <a href="https://www.kaggle.com/hidieorizn"><i class="fab fa-kaggle"></i></a>
-                </div>
-                
-                <div class="copyright">
-                    <p>&copy; 2025 Portofolio Hidieo Riz'n. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="src\script.js"></script>
+  </main>
+
+  <footer>&copy; 2026 Hidieo Riz'n</footer>
+
+  <script src="src/script.js"></script>
 </body>
+
 </html>
